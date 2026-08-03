@@ -58,20 +58,133 @@ section h3 {
 }
 
 .activity-card {
+  position: relative;
   margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  padding: 18px;
+  border: 1px solid #d9e2f2;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 10px 24px rgba(26, 35, 126, 0.08);
+}
+
+.activity-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .activity-card h4 {
-  margin-bottom: 10px;
-  color: #0066cc;
+  margin: 0;
+  color: #1a237e;
+  font-size: 1.1rem;
 }
 
 .activity-card p {
   margin-bottom: 8px;
+  color: #3b455a;
+}
+
+.activity-capacity {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background-color: #e8eefc;
+  color: #1a237e;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.participants-section {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e4e9f3;
+}
+
+.participants-title {
+  margin-bottom: 10px;
+  color: #1f2a44;
+}
+
+.participants-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background-color: #f5f8ff;
+  border: 1px solid #e2e8f7;
+}
+
+.participant-email {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: #2f3a52;
+}
+
+.participant-remove {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #c62828;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px #ef9a9a;
+}
+
+.participant-remove:hover {
+  background-color: #ffebee;
+  color: #ad1457;
+}
+
+.participant-remove:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.participants-list li {
+  color: #4a5568;
+}
+
+.participants-list li::marker {
+  color: #3949ab;
+}
+
+.participants-empty {
+  color: #76839b;
+  font-style: italic;
+  margin-bottom: 0;
 }
 
 .form-group {
